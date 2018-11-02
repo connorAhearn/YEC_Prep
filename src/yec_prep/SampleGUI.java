@@ -1,11 +1,14 @@
 package yec_prep;
 
 import java.awt.FlowLayout;
+import java.awt.GridLayout;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 //Idk what this line does but it gets rid of an error
 @SuppressWarnings("serial")
@@ -16,6 +19,8 @@ public class SampleGUI extends JFrame {
 	JPanel mainPane = new JPanel();
 	JButton button = new JButton("Test Button");
 	JLabel label = new JLabel("Wow a label");
+	JTextField tField = new JTextField("Example Text");
+	JTextArea tArea = new JTextArea("Example \ntext");
 
 	public SampleGUI() {
 		
@@ -27,9 +32,11 @@ public class SampleGUI extends JFrame {
 		setContentPane(mainPane);
 		
 		//Basic mainPane settings
-		mainPane.setLayout(new FlowLayout());
+		mainPane.setLayout(new GridLayout(4,1));
 		mainPane.add(button);
 		mainPane.add(label);
+		mainPane.add(tField);
+		mainPane.add(tArea);
 	}
 
 	public static void main(String[] args) {
