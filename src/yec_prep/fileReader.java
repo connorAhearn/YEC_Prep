@@ -11,5 +11,6 @@ public class fileReader {
 		Scanner reader = new Scanner(new File("input.txt"));
 		
 		while(reader.hasNext()) System.out.println(reader.nextLine());
+		reader.close();
 	}
 }
